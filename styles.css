@@ -1,0 +1,184 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700;&display=swap");
+:root {
+  --tomato: hsl(4, 100%, 67%);
+  --dark-slate-grey: hsl(234, 29%, 20%);
+  --charcoal-grey: hsl(235, 18%, 26%);
+  --grey: hsl(231, 7%, 60%);
+  --white: hsl(0, 0%, 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 16px;
+  line-height: 1.5;
+}
+h1 {
+  margin-bottom: 20px;
+  color: var(--dark-slate-grey);
+}
+p {
+  color: var(--dark-slate-grey);
+}
+
+.card-container {
+  width: 375px;
+}
+.hero-image {
+  background-image: url(assets/images/illustration-sign-up-mobile.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 0 0 15px 15px;
+}
+.main-content {
+  padding: 40px 25px;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 30px;
+}
+
+li {
+  background: url("assets/images/icon-list.svg") no-repeat left calc(21% - 0px);
+  background-size: 16px 16px;
+  padding-left: 30px;
+  margin-bottom: 10px;
+}
+.form-container {
+  margin-top: 40px;
+}
+label {
+  font-weight: 700;
+  font-size: 12px;
+}
+input {
+  width: 100%;
+  padding: 15px 25px;
+  border: 1px solid #cacaca;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+.email-err__message {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.error-message {
+  color: var(--tomato);
+}
+input:active {
+  cursor: pointer;
+}
+input:focus {
+  border: 1px solid var(--grey);
+  outline: none;
+  background-color: var(--white);
+  color: var(--dark-slate-grey);
+}
+::placeholder {
+  color: #cacaca;
+}
+.btn {
+  width: 100%;
+  padding: 15px 25px;
+  border-radius: 5px;
+  border: none;
+  background-color: var(--dark-slate-grey);
+  color: var(--white);
+  margin-top: 20px;
+  transition: transform 0.3s;
+}
+.btn:hover {
+  cursor: pointer;
+}
+.btn:active {
+  transform: scale(0.98);
+}
+.btn-dismiss {
+  font-weight: 700;
+  padding: 23px;
+}
+.error-state {
+  border: 1px solid var(--tomato);
+  color: var(--tomato);
+  background-color: hsla(4, 100%, 67%, 0.1);
+}
+.success-container {
+  width: 375px;
+  padding: 140px 20px 40px;
+  border: 1px solid black;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.success-message h2 {
+  margin: 40px 0 35px;
+  font-size: 35px;
+  line-height: 1;
+}
+.success-message h2,
+p {
+  color: var(--dark-slate-grey);
+}
+#given-email {
+  font-weight: 700;
+}
+.hidden {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  body {
+    background-color: var(--charcoal-grey);
+  }
+  h1 {
+    font-size: 50px;
+  }
+  .card-container {
+    background-color: var(--white);
+    width: 925px;
+    display: flex;
+    flex-direction: row-reverse;
+    border-radius: 20px;
+  }
+  .hero-image {
+    background-image: url(assets/images/illustration-sign-up-desktop.svg);
+    background-repeat: no-repeat;
+    height: 590px;
+    width: 500px;
+    background-size: cover;
+    overflow: hidden;
+    border-radius: 10px;
+    margin: 25px;
+  }
+  .main-content {
+    padding: 100px 60px;
+  }
+  .btn-submit:hover {
+    background-image: linear-gradient(to right, #fe5479, #ff673e);
+    box-shadow: 0 5px 20px rgba(255, 87, 129, 0.3),
+      0 8px 16px rgba(255, 103, 62, 0.3);
+  }
+  .success-container {
+    width: 500px;
+    background-color: var(--white);
+    padding: 40px 60px 60px;
+    height: 500px;
+    border-radius: 30px;
+  }
+  .success-message h2 {
+    font-size: 45px;
+  }
+}
